@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="amybeisel-lambdata",
+    name="lambdata-amybeisel-pt4",
     version="1.0",
     author="Amy Beisel",
     author_email="amy.beisel@gmail.com",
