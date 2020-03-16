@@ -3,6 +3,7 @@
 
 import pandas as pd
 from amys_lambda.my_mod import enlarge
+from amys_lambda.my_mod import split_date
 
 print("Happy Tuesday Night.")
 
@@ -13,4 +14,8 @@ print(df.head())
 x = 5
 print("ENLARGE", x, "TO", enlarge(x))
 
-
+# Create date and time with dataframe 
+df1 = pd.DataFrame() 
+df1['date'] = pd.date_range('1/1/2020', periods = 5, freq ='D')
+print(df1)
+print(split_date(df1,"date"))
