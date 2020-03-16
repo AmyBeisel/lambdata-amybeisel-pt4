@@ -2,6 +2,14 @@
 
 #from lecture - function
 def enlarge(n):
+    """
+    Multiplies a number by 100
+
+    Param: a (numeric/ float /int) the number to enlarge
+
+    Return the enlarged number(numeric)
+
+    """
     return n * 100
 
 #my own function - Function to split dates ("MM/DD/YYYY") into multiple columns:
