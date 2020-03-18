@@ -14,6 +14,10 @@ def enlarge(n):
 
 #my own function - Function to split dates ("MM/DD/YYYY") into multiple columns:
 def split_date(df_in, column_name):
+    """
+    Param: df_in (pandas.DataFrame) containing a column called 'date'
+
+    """
     df_in['year'] = df_in[column_name].dt.year
     df_in['month'] = df_in[column_name].dt.month
     df_in['day'] = df_in[column_name].dt.day
