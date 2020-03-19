@@ -6,14 +6,11 @@ import pandas as pd
 #take a pandas DF that has a state abbrevations
 #....and write a function to add corresponding state names
 
-class DataProcessor():
-    def __init__(self, my_df):
-        """
-        Param: my_df (pd.DataFrame) containing a column called "abbrevations"
-
-        """
-        self.df = my_df.copy()
-
+class CustomFrame(pd.DataFrame):
+    """
+    Param: my_df (pd.DataFrame) containing a column called "abbrevations"
+    """
+  
     def add_state_name(self):
         """
         Adds corresponding state names to dataframe. 
@@ -35,21 +32,26 @@ class DataProcessor():
             'PA': 'Pennsylvania'
         }
     
-        self.df["name"] = self.df["abbrevations"].map(names_map)
+        self["name"] = self["abbrevations"].map(names_map)
     
 
 
 if __name__ == "__main__":
     pass
     print("------------------------")
-    df1 = pd.DataFrame({"abbrevations": ["CA", "CO", "CT", "TX", "DC"]})
-    #print(df.head())
-    # new_df = add_state_name(df1)
-    # print(new_df.head())
-    processor = DataProcessor(df1)
-    print(processor.df.head())
-    processor.add_state_name()
-    print(processor.df.head())
+    # df1 = pd.DataFrame({"abbrevations": ["CA", "CO", "CT", "TX", "DC"]})
+    # #print(df.head())
+    # # new_df = add_state_name(df1)
+    # # print(new_df.head())
+    # processor = DataProcessor(df1)
+    # print(processor.df.head())
+    # processor.add_state_name()
+    # print(processor.df.head())
+
+    custom_df = CustomFrame({"abbrevations": ["CA", "CO", "CT", "TX", "DC"]})
+    print(custom_df.head())
+    custom_df.add_state_name()
+    print(custom_df.head())
 
     # print("------------------------")
     # df2 = pd.DataFrame({"abbrevations": ["OH", "MI", "CT", "TX", "PA"]})
