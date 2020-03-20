@@ -13,17 +13,18 @@ def enlarge(n):
     return n * 100
 
 #my own function - Function to split dates ("MM/DD/YYYY") into multiple columns:
-def split_date(df_in, column_name):
-    """
-    Param: df_in (pandas.DataFrame) containing a column called 'date'
+# def split_date(df_in, column_name):
+#     """
+#     Param: df_in (pandas.DataFrame) containing a column called 'date'
 
-    """
-    df_in['year'] = df_in[column_name].dt.year
-    df_in['month'] = df_in[column_name].dt.month
-    df_in['day'] = df_in[column_name].dt.day
-    return df_in
+#     return the year, month and day into seperate columns
+
+#     """
+#     df_in['year'] = df_in[column_name].dt.year
+#     df_in['month'] = df_in[column_name].dt.month
+#     df_in['day'] = df_in[column_name].dt.day
+#     return df_in
     
-
 
 if __name__ == "__main__":
     #only if running from command line, invoke the following code:
@@ -34,3 +35,5 @@ if __name__ == "__main__":
 
     y = float(input("Please input a number to enlarge: "))
     print(enlarge(y))
+
+    

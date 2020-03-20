@@ -8,13 +8,13 @@ import pandas as pd
 
 class CustomFrame(pd.DataFrame):
     """
-    Param: my_df (pd.DataFrame) containing a column called "abbrevations"
+    Param: pd.DataFrame containing a column called "abbrevations"
     """
   
     def add_state_name(self):
         """
         Adds corresponding state names to dataframe. 
-        Param: my_df (pd.DataFrame) containing a column called "abbrevations"
+        
         """
         
         #new_df = self.df.copy()
