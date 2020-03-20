@@ -7,3 +7,9 @@ run it locally.
 ```sh
 python -m test.my_mod_test
 ```
+
+...or:
+
+```sh
+pytest
+```
