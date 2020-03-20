@@ -22,7 +22,7 @@ class CustomFrame(pd.DataFrame):
         #see: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html
 
         names_map = {
-            "CA":  "Califorina",
+            "CA":  "California",
             "CO":  "Colorado",
             "CT":  "Connecticut",
             "TX":  "Texas",
